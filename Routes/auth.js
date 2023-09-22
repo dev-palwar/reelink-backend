@@ -1,13 +1,13 @@
-import dotenv from "dotenv";
+const dotenv = require("dotenv");
 dotenv.config();
-import express from "express";
-import passport from "passport";
-import {
+const express = require("express");
+const passport = require("passport");
+const {
   addToWatchlist,
   getUser,
   logout,
   throwError,
-} from "../Controllers/user.js";
+} = require("../Controllers/user.js");
 const router = express.Router();
 
 router.get("/", (req, res) => res.json({ message: "Chal raha hai" }));
@@ -29,4 +29,4 @@ router.post("/addToWatchlist", addToWatchlist);
 
 router.get("/logout", logout);
 
-export default router;
+module.exports = router;

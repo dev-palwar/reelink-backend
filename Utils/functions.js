@@ -7,4 +7,4 @@ const sendResponse = (res, error, message, resFromDB, added) => {
   });
 };
 
-export default sendResponse;
+module.exports = sendResponse;

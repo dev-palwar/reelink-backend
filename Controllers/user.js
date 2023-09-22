@@ -1,5 +1,5 @@
-import User from "../Model/users.js";
-import sendResponse from "../Utils/functions.js";
+const User = require("../Model/users.js");
+const sendResponse = require("../Utils/functions.js");
 
 const logout = async (req, res) => {
   req.logOut(() => res.status(200).json({ message: "User logged out" }));
@@ -47,4 +47,4 @@ const addToWatchlist = async (req, res) => {
   }
 };
 
-export { logout, getUser, throwError, addToWatchlist };
+module.exports = { logout, getUser, throwError, addToWatchlist };
