@@ -9,7 +9,7 @@
     "start": "node index.js",
     "dev": "npx nodemon index.js"
   },
-  "author": "Dev",
+  "author": "Dev Palwar",
   "license": "ISC",
   "dependencies": {
     "cookie-session": "^2.0.0",
