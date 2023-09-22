@@ -5,12 +5,12 @@ const express = require("express");
 const cors = require("cors");
 const session = require("express-session");
 const passport = require("passport");
-const connectDatabase = require("./Database/Config.js");
-const router = require("./Routes/auth.js");
+const connectDatabase = require("../Database/Config.js");
+const router = require("../Routes/auth.js");
 const app = express();
 
 connectDatabase();
-require("./google.js")
+require("../google.js")
 
 app.use(express.json());
 
