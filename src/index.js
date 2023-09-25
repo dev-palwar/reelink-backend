@@ -10,7 +10,7 @@ const router = require("../Routes/auth.js");
 const app = express();
 
 connectDatabase();
-require("../google.js")
+require("../google.js");
 
 app.use(express.json());
 
@@ -26,7 +26,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(
   cors({
-    origin: "https://reelink.vercel.app",
+    origin: process.env.CLIENT_URL,
     methods: "GET,POST,PUT,DELETE",
     credentials: true,
   })
