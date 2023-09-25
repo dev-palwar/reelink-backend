@@ -20,7 +20,7 @@ router.get("/getUser", getUser);
 router.get(
   "/authRoute/callBack",
   passport.authenticate("google", {
-    successRedirect: process.env.CLIENT_URL,
+    successRedirect: "/getUser",
     failureRedirect: "/login/failed",
   })
 );
