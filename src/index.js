@@ -19,7 +19,7 @@ app.use(
     secret: "keyboard cat",
     resave: false,
     saveUninitialized: true,
-    cookie: { secure: false },
+    cookie: { secure: process.env.PORT === 8000 ? false : true },
   })
 );
 app.use(passport.initialize());
